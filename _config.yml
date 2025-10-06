@@ -1,0 +1,50 @@
+# GitHub Pages Configuration
+title: "Rashin Rahnamoun - Academic Website"
+description: "Academic website for Rashin Rahnamoun - Computer Engineering student and researcher in NLP and HCI"
+author: "Rashin Rahnamoun"
+email: "rahnamounrashin@gmail.com"
+
+# GitHub Pages settings
+baseurl: ""
+url: "https://rarahnamoun.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Collections
+collections:
+  publications:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publication"
