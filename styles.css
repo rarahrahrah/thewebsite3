@@ -6,30 +6,80 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
-    color: #333;
+    color: #000000;
     background-color: #ffffff;
     font-size: 16px;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 40px 20px;
+}
+
+/* Navigation Styles */
+.navigation {
+    margin: 30px 0;
+    border-bottom: 2px solid #000000;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 25px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    background-color: #f5f5f5;
+    border-bottom-color: #666666;
+}
+
+.nav-link.active {
+    border-bottom-color: #000000;
+    font-weight: 700;
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
 }
 
 /* Header Styles */
 .header {
     text-align: center;
     margin-bottom: 40px;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid #000000;
     padding-bottom: 30px;
 }
 
 .last-updated {
     text-align: right;
-    color: #666;
+    color: #666666;
     margin-bottom: 20px;
     font-size: 14px;
 }
@@ -37,9 +87,9 @@ body {
 .name {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #000000;
     margin-bottom: 20px;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.05em;
 }
 
 .contact-links {
@@ -53,16 +103,17 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #2563eb;
+    color: #000000;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     transition: color 0.2s ease;
+    border-bottom: 1px solid transparent;
 }
 
 .contact-link:hover {
-    color: #1d4ed8;
-    text-decoration: underline;
+    color: #666666;
+    border-bottom-color: #000000;
 }
 
 .contact-link i {
@@ -75,23 +126,39 @@ body {
 }
 
 .section-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 20px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000000;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
+}
+
+.subsection-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #000000;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #000000;
+    margin-bottom: 30px;
+    font-style: italic;
 }
 
 /* Education Styles */
 .education-item {
     margin-bottom: 25px;
     padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    border-left: 4px solid #2563eb;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 0;
 }
 
 .item-header {
@@ -103,17 +170,17 @@ body {
     gap: 10px;
 }
 
-.item-header h3 {
+.item-header h3, .item-header h4 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #000000;
     margin: 0;
 }
 
 .location {
-    color: #666;
+    color: #666666;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .item-details {
@@ -125,13 +192,13 @@ body {
 }
 
 .degree {
-    font-weight: 500;
-    color: #374151;
+    font-weight: 400;
+    color: #000000;
     margin: 0;
 }
 
 .date {
-    color: #666;
+    color: #666666;
     font-size: 14px;
     margin: 0;
 }
@@ -141,42 +208,37 @@ body {
     margin-bottom: 30px;
 }
 
-.subsection-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #374151;
-    margin-bottom: 15px;
-    padding-left: 15px;
-    border-left: 3px solid #2563eb;
-}
-
 .publication-item {
     margin-bottom: 20px;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 6px;
-    border-left: 3px solid #e0e0e0;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0;
 }
 
 .publication-text {
     margin: 0;
     line-height: 1.7;
-    text-align: justify;
+    text-align: left;
+    color: #000000;
 }
 
 .conference {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .highlight-blue {
-    color: #2563eb;
-    font-weight: 600;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 .oral-presentation {
-    color: #dc2626;
-    font-weight: 600;
+    color: #000000;
+    font-weight: 700;
     font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 /* Awards Styles */
@@ -187,15 +249,16 @@ body {
 }
 
 .award-item {
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 6px;
-    border-left: 3px solid #10b981;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0;
 }
 
 .award-item p {
     margin: 0;
-    font-weight: 500;
+    font-weight: 400;
+    color: #000000;
 }
 
 .award-details {
@@ -205,27 +268,28 @@ body {
 
 .award-details li {
     margin-bottom: 5px;
-    color: #374151;
+    color: #000000;
 }
 
 /* Research Interests */
 .research-interests {
     font-size: 1.1rem;
-    color: #374151;
-    font-weight: 500;
+    color: #000000;
+    font-weight: 400;
     padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 6px;
-    border-left: 3px solid #7c3aed;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0;
+    font-style: italic;
 }
 
 /* Projects Styles */
 .project-item {
     margin-bottom: 30px;
     padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    border-left: 4px solid #7c3aed;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0;
 }
 
 .project-header {
@@ -240,17 +304,18 @@ body {
 .project-header h3 {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #000000;
     margin: 0;
 }
 
 .tech-stack {
-    color: #666;
+    color: #666666;
     font-size: 14px;
-    font-weight: 500;
-    background-color: #e5e7eb;
+    font-weight: 400;
+    background-color: #ffffff;
     padding: 4px 8px;
-    border-radius: 4px;
+    border: 1px solid #000000;
+    border-radius: 0;
 }
 
 .project-description {
@@ -260,17 +325,17 @@ body {
 
 .project-description li {
     margin-bottom: 8px;
-    color: #374151;
+    color: #000000;
 }
 
 .project-description a {
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: 500;
+    color: #000000;
+    text-decoration: underline;
+    font-weight: 400;
 }
 
 .project-description a:hover {
-    text-decoration: underline;
+    color: #666666;
 }
 
 /* Skills Styles */
@@ -281,15 +346,16 @@ body {
 }
 
 .skill-category {
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 6px;
-    border-left: 3px solid #f59e0b;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0;
 }
 
 .skill-category p {
     margin: 0;
-    font-weight: 500;
+    font-weight: 400;
+    color: #000000;
 }
 
 /* Miscellaneous Styles */
@@ -301,11 +367,51 @@ body {
 
 .misc-list p {
     margin: 0;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 6px;
-    border-left: 3px solid #ec4899;
-    font-weight: 500;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0;
+    font-weight: 400;
+    color: #000000;
+}
+
+/* News Feed Styles */
+.news-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news-item {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.news-date {
+    font-weight: 700;
+    color: #000000;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+.news-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 10px 0;
+}
+
+.news-content p {
+    margin: 0;
+    color: #000000;
+    line-height: 1.6;
 }
 
 /* Responsive Design */
@@ -324,6 +430,17 @@ body {
         gap: 15px;
     }
     
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-link {
+        padding: 12px 20px;
+        width: 100%;
+        text-align: center;
+    }
+    
     .item-header,
     .item-details,
     .project-header {
@@ -332,16 +449,22 @@ body {
     }
     
     .item-header h3,
+    .item-header h4,
     .project-header h3 {
         margin-bottom: 5px;
     }
     
     .section-title {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
-    .publication-text {
-        text-align: left;
+    .news-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .news-date {
+        min-width: auto;
     }
 }
 
@@ -357,8 +480,13 @@ body {
     .education-item,
     .project-item,
     .publication-item,
-    .award-item {
+    .award-item,
+    .news-item {
         padding: 15px;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
     }
 }
 
@@ -367,6 +495,8 @@ body {
     body {
         font-size: 12px;
         line-height: 1.4;
+        color: #000000;
+        background-color: #ffffff;
     }
     
     .container {
@@ -381,14 +511,23 @@ body {
     .education-item,
     .project-item,
     .publication-item,
-    .award-item {
+    .award-item,
+    .news-item {
         background-color: transparent;
-        border: 1px solid #ddd;
+        border: 1px solid #000000;
         page-break-inside: avoid;
     }
     
     .contact-links {
         flex-wrap: wrap;
         gap: 10px;
+    }
+    
+    .navigation {
+        display: none;
+    }
+    
+    .tab-content {
+        display: block !important;
     }
 }
